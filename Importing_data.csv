@@ -1,0 +1,42 @@
+id_alumno,nombre,carrera,grupo,fecha_ingreso
+10,Fuentes Galvan Pedro,Ing. En TICs,B101,2017-02-04
+11,Lorenzo Fernandez Gabriel,Ing. en Materiales,C101,2017-02-05
+12,Sanchez Perez Armando,Ing. En Materiales,G200,2017-02-06
+13,Sandoval Martinez Hugo,Ing. En Materiales,G200,2017-02-07
+14,Sanchez Perez Armando,Ing. en Quimica,P301,2017-02-08
+15,Angelina Ontiveros Lopez,Ing. en Informatica,C400,2017-02-09
+16,Jesus Alejandro Martinez Rodriguez,Ing. En Quimica,C500,2017-02-10
+17,Renata Cruz Trejo,Ing. en Materiales,A101,2017-02-11
+18,Elizabeth Calderon Sandoval,Ing. en Materiales,B101,2017-02-12
+19,Fuentes Galvan Pedro,Ing. En TICs,B102,2017-02-13
+20,Lorenzo Fernandez Gabriel,Ing. en Materiales,C102,2017-02-14
+21,Sanchez Perez Armando,Ing. En Materiales,G200,2017-02-15
+22,Sandoval Martinez Hugo,Ing. En Materiales,G200,2017-02-16
+23,Sanchez Perez Armando,Ing. en Quimica,P302,2017-02-17
+24,Angelina Ontiveros Lopez,Ing. en Informatica,C600,2017-02-18
+25,Jesus Alejandro Martinez Rodriguez,Ing. En Quimica,C700,2017-02-19
+26,Renata Cruz Trejo,Ing. en Materiales,A102,2017-02-20
+27,Elizabeth Calderon Sandoval,Ing. en Materiales,B102,2017-02-21
+28,Fuentes Galvan Pedro,Ing. En TICs,B103,2017-02-22
+29,Lorenzo Fernandez Gabriel,Ing. en Materiales,C103,2017-02-23
+30,Sanchez Perez Armando,Ing. En Materiales,G200,2017-02-24
+31,Sandoval Martinez Hugo,Ing. En Materiales,G200,2017-02-25
+32,Sanchez Perez Armando,Ing. en Quimica,P303,2017-02-26
+33,Angelina Ontiveros Lopez,Ing. en Informatica,C800,2017-02-27
+34,Jesus Alejandro Martinez Rodriguez,Ing. En Quimica,C900,2017-02-28
+35,Renata Cruz Trejo,Ing. en Materiales,A103,2017-03-01
+36,Elizabeth Calderon Sandoval,Ing. en Materiales,B103,2017-03-02
+37,Fuentes Galvan Pedro,Ing. En TICs,B104,2017-03-03
+38,Lorenzo Fernandez Gabriel,Ing. en Materiales,C104,2017-03-04
+39,Sanchez Perez Armando,Ing. En Materiales,G200,2017-03-05
+40,Sandoval Martinez Hugo,Ing. En Materiales,G200,2017-03-06
+41,Sanchez Perez Armando,Ing. en Quimica,P304,2017-03-07
+42,Angelina Ontiveros Lopez,Ing. en Informatica,C1000,2017-03-08
+43,Jesus Alejandro Martinez Rodriguez,Ing. En Quimica,C1100,2017-03-09
+44,Renata Cruz Trejo,Ing. en Materiales,A104,2017-03-10
+45,Elizabeth Calderon Sandoval,Ing. en Materiales,B104,2017-03-11
+46,Fuentes Galvan Pedro,Ing. En TICs,B105,2017-03-12
+47,Lorenzo Fernandez Gabriel,Ing. en Materiales,C105,2017-03-13
+48,Sanchez Perez Armando,Ing. En Materiales,G200,2017-03-14
+49,Sandoval Martinez Hugo,Ing. En Materiales,G200,2017-03-15
+50,Sanchez Perez Armando,Ing. en Quimica,P305,2017-03-16
