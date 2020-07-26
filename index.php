@@ -36,25 +36,25 @@ include ('DB/dbhandler.php');
         <div class ="card bg-gradient-dark">
             <div class = "card-body col-lg-12">
                 <form class="form-group form-inline">
-                    <form class="my-2" method="post">
+                    <form class="" method="post">
                         <input class="form-control mr-sm-2 col-lg-4" type="search" id="search" placeholder="Buscar..." aria-label="Search">
                     </form>
                     <form method="post" action="export.php">
                         <button type="submit" name="report" class="btn btn-info mt-0 mb-1"><i class="fas fa-download"></i></button>
                     </form>
-                    <button type="submit" name="add" class="btn btn-success mt-0 mb-1"><i class="fas fa-user-plus"></i></button>
+                    <button type="submit" name="add" class="btn btn-success"><i class="fas fa-user-plus"></i></button>
                 </form>
             </div>
             <div class ="col-lg-12">
                 <table class="table table-hover" id="result_table"></table>
             </div>
-            <div>
-                <form action="" method="post" enctype="multipart/form-data" id="filesForm">
-                    <div class="col-md-5">
+            <div class="mb-5">
+                <form class="form-inline col-md-6" method="post" enctype="multipart/form-data" id="filesForm">
+                    <div class="">
                         <input class="form-control" type="file" name="file">
                     </div>
                     <div>
-                        <button type="button" onclick="uploadfile()" class="btn btn-secondary form-control col-sm-1"><i class="fas fa-upload"></i></button>
+                        <button type="button" onclick="uploadfile()" class="btn btn-secondary form-control col-lg-12"><i class="fas fa-upload"></i></button>
                     </div>
                  </form>
             </div>
@@ -75,7 +75,7 @@ include ('DB/dbhandler.php');
         contentType: false,
         success: function(data)
         {
-            alert('Rgeisters Succesfully added!');
+            //alert('Rgeisters Succesfully added!');
         }
     });
 };
