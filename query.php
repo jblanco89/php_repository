@@ -22,7 +22,7 @@ if(isset($_POST['alumnos']))
                 <tr>
                     <th>Student ID</th>
                     <th>Name </th>
-                    <th>Carreer</th>
+                    <th>Career</th>
                     <th>Group</th>
                     <th>Admission Date</th>
                 </tr>';
