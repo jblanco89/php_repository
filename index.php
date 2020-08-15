@@ -10,12 +10,16 @@ include ('DB/dbhandler.php');
     <!-- Styles ------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     
     <!-- Scripts --->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="js/functions.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <!--<script src="js/functions.js"></script>-->
+    
 
 
 </head>
@@ -48,8 +52,19 @@ include ('DB/dbhandler.php');
                     
                 </form>
             </div>
-            <div class ="col-lg-12">
-                <table class="table table-hover" id="result_table"></table>
+            <div class ="col-md-12">   
+                <table class="table table-hover" id="result_table" name="">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name </th>
+                            <th>Career</th>
+                            <th>Group</th>
+                            <th>Admission Date</th>
+                            <!--<th>Action</th>-->
+                        </tr>
+                    </thead>
+                </table>
             </div>
             <div class="mb-5">
                 <form class="form-inline col-md-6" method="post" enctype="multipart/form-data" id="filesForm">
@@ -103,6 +118,7 @@ include ('DB/dbhandler.php');
         </div>
     </div>
 <script>
+
     function uploadfile()
 {
 
@@ -155,6 +171,23 @@ $(document).ready(function(){
             })
         }
     });
+});
+$(document).ready(function(){
+   $('#result_table').DataTable({
+      'processing': true,
+      'serverSide': true,
+      'serverMethod': 'post',
+      'ajax': {
+          'url':'pagination.php'
+      },
+      'columns': [
+         { data: 'id_alumno' },
+         { data: 'nombre' },
+         { data: 'carrera' },
+         { data: 'grupo' },
+         { data: 'fecha_ingreso' },
+      ]
+   });
 });
 </script>
 </body>

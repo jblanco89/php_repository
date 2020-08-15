@@ -18,24 +18,27 @@ if(isset($_POST['alumnos']))
     $alumnos = $conn->query($query);
     if ($alumnos->num_rows > 0){
         $table .=
-            '<tbody class="col-lg-12">
+            '<thead class="col-lg-12">
                 <tr>
                     <th>Student ID</th>
                     <th>Name </th>
                     <th>Career</th>
                     <th>Group</th>
                     <th>Admission Date</th>
-                </tr>';
+                </tr>
+            </thead>';
             while ($result = $alumnos->fetch_assoc())
             {
                 $table .=
-                '<tr>
-                        <td>'.$result['id_alumno'].'</td>
-                        <td>'.$result['nombre'].'</td>
-                        <td>'.$result['carrera'].'</td>
-                        <td>'.$result['grupo'].'</td>
-                        <td>'.$result['fecha_ingreso'].'</td>
-                </tr>';
+                '<tbody class="col-lg-12">
+                    <tr>
+                            <td>'.$result['id_alumno'].'</td>
+                            <td>'.$result['nombre'].'</td>
+                            <td>'.$result['carrera'].'</td>
+                            <td>'.$result['grupo'].'</td>
+                            <td>'.$result['fecha_ingreso'].'</td>
+                    </tr>
+                </tbody>';
             }
             $table.= '</tbody>';
     } 

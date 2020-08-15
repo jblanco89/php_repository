@@ -10,6 +10,6 @@ $dateAdmission = $_POST['dateAdmission'];
 $sql = "INSERT INTO alumnos (id_alumno, nombre, carrera, grupo, fecha_ingreso) 
             VALUES ('$id','$name','$career','$group','$dateAdmission')";
 
-mysqli_query ($conn, $sql);
+mysqli_query($conn, $sql);
 
 ?>
