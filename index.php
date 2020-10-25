@@ -1,5 +1,6 @@
 <?php
-include ('DB/dbhandler.php');
+include 'DB/dbhandler.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,19 +21,33 @@ include ('DB/dbhandler.php');
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
     <!--<script src="js/functions.js"></script>-->
-    
 
 
 </head>
+<body class="col-md-12 bg-primary">
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="collapse navbar-collapse navbar-brand">
+            <a class= "nav-link" href="index.php"></a><img src="img/logo.png" alt="logo">
+            <ul class="navbar-nav">
+                <li><a href="index.php">Home</a></li>
+                <?php
 
+                    if (isset($_SESSION["userid"])) {
+                        echo '<li><a href="profile.php">Profile</a></li>'; 
+                        echo '<li><a href="logout.php">Log Out</a></li>';
+                    }
+                    else {
+                        echo '<li><a href="signup.php">Sign Up</a></li>';
+                        echo '<li><a href="login.php">Log In</a></li>';
+                    }
 
-<body class="col-md-12 bg-secondary" >
-    <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Student Summary Report</span>
+                ?>
+            </ul>
+        </div>
     </nav>
     <div class="container mt-0">
         <div class="card">
-            <div class="card-body bg-info">
+            <div class="card-body bg-dark">
                 <center><h1 style="color:white;">STUDENTS MANAGEMENT </h1></center>
             </div>
         </div>

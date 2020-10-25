@@ -92,3 +92,40 @@ function createUser($conn, $name, $email, $username, $pwd) {
     exit();
 
 }
+function emptyInputLogin ($username, $pwd){
+    $result;
+    if (empty($username)|| empty($pwd)) {
+       $result = true; 
+    }
+    else {
+        $result = false;
+
+    }
+    return $result;
+
+}
+
+function loginUser($conn, $username, $pwd){
+    $uidExists = uidExists($conn, $username, $username); //remember: in login function user could give us either "username" or "email", that's why "$username" variable is repeated. 
+    
+    if ($uidExists === false) {
+        header("location: ../login.php?error=wronglogin");
+        exit();
+    }
+
+    $pwdHashed = $uidExists["usersPwd"];
+    $checkPwd = password_verify($pwd, $pwdHashed);
+
+    if ($checkPwd === false) {
+        header("location:../login.php?error=userdoesnotexist");
+        exit();
+    }
+    elseif ($checkPwd === true) {
+        session_start();
+        $_SESSION["userid"] = $uidExists["usersId"];
+        $_SESSION["userid"] = $uidExists["usersUid"];
+        header("location:../index.php");
+        exit();
+
+    }
+}
